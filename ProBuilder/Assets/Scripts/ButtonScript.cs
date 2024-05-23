@@ -10,10 +10,12 @@ public class ButtonScript : MonoBehaviour
     void Start()
     {
         this.template.SetActive(false);  
-        for(int i = 0; i < 10; i++)
-        {
-            this.OnSpawnEvent();
-        }
+        EventBroadcaster.Instance.AddObserver(EventNames.S18_Events.ON_SPAWN_CLICK, this.OnSpawnEvent);
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.S18_Events.ON_SPAWN_CLICK);
     }
 
     // Update is called once per frame

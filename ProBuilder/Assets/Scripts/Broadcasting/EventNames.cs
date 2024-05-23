@@ -49,6 +49,7 @@ public class EventNames {
 	public class S18_Events {
 		public const string ON_FIRST_SCAN = "FIRST_TARGET_SCAN";
 		public const string ON_FINAL_SCAN = "ON_FINAL_SCAN";
+		public const string ON_SPAWN_CLICK = "ON_SPAWN_CLICK";
 	}
 }
 
