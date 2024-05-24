@@ -26,7 +26,8 @@ public class ButtonScript : MonoBehaviour
 
     private void OnSpawnEvent()
     {
-        GameObject instance = GameObject.Instantiate(this.template,this.transform);
+        Vector3 position = new Vector3(Random.Range(-10.0f, 10.0f), 0.0f, Random.Range(-5.0f, 10.0f));
+        GameObject instance = GameObject.Instantiate(this.template,position, Quaternion.identity);
         instance.SetActive(true);
         objectList.Add(instance);
     }
