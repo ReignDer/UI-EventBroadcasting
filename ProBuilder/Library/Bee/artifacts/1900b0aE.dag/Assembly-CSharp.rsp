@@ -397,6 +397,7 @@
 "Assets/Scripts/Broadcasting/ObserverList.cs"
 "Assets/Scripts/Broadcasting/Parameters.cs"
 "Assets/Scripts/ButtonScript.cs"
+"Assets/Scripts/ClearAllScript.cs"
 "Assets/Scripts/HudDisplay.cs"
 "Assets/Scripts/LoadManager/LoadManager.cs"
 "Assets/Scripts/LoadManager/SceneNames.cs"
