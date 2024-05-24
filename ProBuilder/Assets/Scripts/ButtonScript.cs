@@ -13,11 +13,13 @@ public class ButtonScript : MonoBehaviour
     {
         this.template.SetActive(false);  
         EventBroadcaster.Instance.AddObserver(EventNames.S18_Events.ON_SPAWN_CLICK, this.OnSpawnEvent);
+        EventBroadcaster.Instance.AddObserver(EventNames.S18_Events.ON_CLEAR_CLICK, this.OnClearEvent);
     }
 
     private void OnDestroy()
     {
         EventBroadcaster.Instance.RemoveObserver(EventNames.S18_Events.ON_SPAWN_CLICK);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.S18_Events.ON_CLEAR_CLICK);
     }
 
     // Update is called once per frame
@@ -38,5 +40,16 @@ public class ButtonScript : MonoBehaviour
             objectList.Add(instance);
         }
        
+    }
+
+    private void OnClearEvent()
+    {
+        for (int i = 0; i < this.objectList.Count; i++)
+        {
+            GameObject.Destroy(this.objectList[i].gameObject);
+        }
+
+        this.objectList.Clear();
+
     }
 }

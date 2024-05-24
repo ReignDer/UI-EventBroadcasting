@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,5 +36,10 @@ public class HUD : MonoBehaviour
             this.spawnText.text = "Available balls: " + this.spawnCounter;
 
         }
+    }
+
+    public void OnClearButtonClicked()
+    {
+        EventBroadcaster.Instance.PostEvent(EventNames.S18_Events.ON_CLEAR_CLICK);
     }
 }

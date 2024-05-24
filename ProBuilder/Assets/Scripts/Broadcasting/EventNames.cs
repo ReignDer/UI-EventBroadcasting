@@ -50,6 +50,7 @@ public class EventNames {
 		public const string ON_FIRST_SCAN = "FIRST_TARGET_SCAN";
 		public const string ON_FINAL_SCAN = "ON_FINAL_SCAN";
 		public const string ON_SPAWN_CLICK = "ON_SPAWN_CLICK";
+		public const string ON_CLEAR_CLICK = "ON_CLEAR_CLICK";
 	}
 }
 
